@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'main.dart';
+
 class Result extends StatelessWidget {
   final VoidCallback resetQuize;
   final resultScore;
@@ -27,12 +29,12 @@ class Result extends StatelessWidget {
       children: [
         Text(
           "Your Score is $resultScore",
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: b),
           textAlign: TextAlign.center,
         ),
         Text(
           resultPhrase,
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: b),
           textAlign: TextAlign.center,
         ),
         // FlatButton(onPressqed: onPressed, child: child)
