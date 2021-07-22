@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quizapp/Answer.dart';
-import 'package:quizapp/Question.dart';
-import 'package:quizapp/result.dart';
+import 'result.dart';
 
-import 'quiz.dart';
+import 'Quiz.dart';
 
 main() => runApp(MyApp());
 
@@ -14,41 +12,70 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int _questionIndex = 0;
+  int _totalScore = 0;
 
   void _resetQuize() {
     setState(() {
       _questionIndex = 0;
+      _totalScore = 0;
     });
   }
 
-  void _answerQuetions() {
+  void _answerQuetions(int score) {
+    _totalScore += score;
     setState(() {
       _questionIndex += 1;
     });
     print('answer chosen ...!');
     print(_questionIndex);
+    print('total if${_totalScore}');
   }
 
   final List<Map<String, Object>> _questions = [
     {
       'questionTest': 'What\'s your favorite color',
-      'answer': ['Black', 'Green', 'Red', 'Blue']
+      'answer': [
+        {'text': 'Black', 'score': 10},
+        {'text': 'Green', 'score': 20},
+        {'text': 'Red', 'score': 30},
+        {'text': 'Blue', 'score': 40},
+      ]
     },
     {
       'questionTest': 'What\'s your favorite animal',
-      'answer': ['Cat', 'Dog', 'Lion', 'Rabbit']
+      'answer': [
+        {'text': 'Cat', 'score': 10},
+        {'text': 'Dog', 'score': 20},
+        {'text': 'Lion', 'score': 30},
+        {'text': 'Rabbit', 'score': 40},
+      ]
     },
     {
       'questionTest': 'What\'s your favorite city',
-      'answer': ['Gaza', 'Rafah', 'Khanyounis', 'DerElbalah']
+      'answer': [
+        {'text': 'Gaza', 'score': 10},
+        {'text': 'Rafah', 'score': 20},
+        {'text': 'Khanyounis', 'score': 30},
+        {'text': 'DerElbalah', 'score': 40},
+      ]
     },
     {
       'questionTest': 'What\'s your favorite frout',
-      'answer': ['Banana', 'Apple', 'Orange', 'Strawberries']
+      'answer': [
+        {'text': 'Banana', 'score': 10},
+        {'text': 'Apple', 'score': 20},
+        {'text': 'Orange', 'score': 30},
+        {'text': 'Strawberries', 'score': 40},
+      ]
     },
     {
       'questionTest': 'What\'s your favorite vegetables',
-      'answer': ['Tomato', 'Cucumber', 'eُggplant', 'Cabbage']
+      'answer': [
+        {'text': 'Tomato', 'score': 10},
+        {'text': 'Cucumber', 'score': 20},
+        {'text': 'eُggplant', 'score': 30},
+        {'text': 'Cabbage', 'score': 40},
+      ]
     },
   ];
   @override
