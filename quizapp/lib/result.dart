@@ -32,16 +32,23 @@ class Result extends StatelessWidget {
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: b),
           textAlign: TextAlign.center,
         ),
-        Text(
-          resultPhrase,
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: b),
-          textAlign: TextAlign.center,
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            resultPhrase,
+            style:
+                TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: b),
+            textAlign: TextAlign.center,
+          ),
         ),
         // FlatButton(onPressqed: onPressed, child: child)
 
-        ElevatedButton(
-            child: Text('Restart the Quiz', style: TextStyle(fontSize: 22)),
-            onPressed: resetQuize)
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ElevatedButton(
+              child: Text('Restart the Quiz', style: TextStyle(fontSize: 22)),
+              onPressed: resetQuize),
+        )
       ],
     ));
   }
