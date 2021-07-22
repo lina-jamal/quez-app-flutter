@@ -88,7 +88,7 @@ class _MyAppState extends State<MyApp> {
         body: Container(
             child: _questionIndex < _questions.length
                 ? Quiz(_questions, _questionIndex, _answerQuetions)
-                : Result(_resetQuize)
+                : Result(_resetQuize, _totalScore)
 
             // Question()
             ),
