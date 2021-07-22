@@ -23,10 +23,17 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
         child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        Text(
+          "Your Score is $resultScore",
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
         Text(
           resultPhrase,
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
         ),
         // FlatButton(onPressqed: onPressed, child: child)
 
